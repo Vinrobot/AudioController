@@ -18,7 +18,6 @@ public class Audio {
 	}
 
 	public static Line getOutputLine(String... names) {
-		Line wanted = null;
 		if (names != null && names.length > 0) {
 			for (Mixer mxr : getMixers()) {
 				for (Line line : getOutputLines(mxr)) {
@@ -31,7 +30,7 @@ public class Audio {
 				}
 			}
 		}
-		return wanted;
+		return null;
 	}
 
 	public static HashSet<Mixer> getMixers() {
