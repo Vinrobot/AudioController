@@ -33,6 +33,9 @@ master.setMuted(true);
 master.setMuted(false);
 ```
 
+## License
+This project is licensed under the [MIT License](http://en.wikipedia.org/wiki/MIT_License).
+
 ## ToDo
  * Add a little summary
  * JavaDoc
