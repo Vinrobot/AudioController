@@ -1,4 +1,4 @@
-package ch.vinrobot.audio;
+package net.vinrobot.audio;
 
 /**
  * @author vincent

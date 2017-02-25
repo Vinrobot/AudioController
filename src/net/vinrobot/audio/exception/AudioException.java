@@ -1,4 +1,4 @@
-package ch.vinrobot.audio.exception;
+package net.vinrobot.audio.exception;
 
 import javax.sound.sampled.Line;
 

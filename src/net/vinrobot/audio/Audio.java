@@ -1,11 +1,11 @@
-package ch.vinrobot.audio;
+package net.vinrobot.audio;
 
 import java.util.HashSet;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Line;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.Mixer;
-import ch.vinrobot.audio.exception.AudioException;
+import net.vinrobot.audio.exception.AudioException;
 
 public class Audio {
 

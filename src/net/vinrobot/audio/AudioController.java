@@ -1,4 +1,4 @@
-package ch.vinrobot.audio;
+package net.vinrobot.audio;
 
 import javax.sound.sampled.BooleanControl;
 import javax.sound.sampled.CompoundControl;
@@ -6,8 +6,8 @@ import javax.sound.sampled.Control;
 import javax.sound.sampled.FloatControl;
 import javax.sound.sampled.Line;
 import javax.sound.sampled.LineUnavailableException;
-import ch.vinrobot.audio.exception.AudioException;
-import ch.vinrobot.audio.exception.RuntimeAudioException;
+import net.vinrobot.audio.exception.AudioException;
+import net.vinrobot.audio.exception.RuntimeAudioException;
 
 public class AudioController implements IAudioController {
 
