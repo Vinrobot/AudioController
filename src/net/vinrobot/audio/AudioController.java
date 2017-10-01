@@ -21,7 +21,7 @@ public class AudioController implements IAudioController {
 	}
 
 	@Override
-	public AudioController setVolume(float volume) {
+	public AudioController setVolume(float volume) throws AudioException {
 		if (volume < 0 || volume > 1) {
 			throw new RuntimeAudioException("Volume", 0, 1);
 		}
@@ -31,7 +31,6 @@ public class AudioController implements IAudioController {
 				if (control != null) {
 					control.setValue(volume);
 				}
-			} catch (AudioException ex) {
 			} finally {
 				this.close();
 			}
@@ -40,7 +39,7 @@ public class AudioController implements IAudioController {
 	}
 
 	@Override
-	public float getVolume() {
+	public float getVolume() throws AudioException {
 		float volume = -1;
 		if (this.open()) {
 			try {
@@ -48,7 +47,6 @@ public class AudioController implements IAudioController {
 				if (control != null) {
 					volume = control.getValue();
 				}
-			} catch (AudioException ex) {
 			} finally {
 				this.close();
 			}
@@ -57,14 +55,13 @@ public class AudioController implements IAudioController {
 	}
 
 	@Override
-	public AudioController setMuted(boolean mute) {
+	public AudioController setMuted(boolean mute) throws AudioException {
 		if (this.open()) {
 			try {
 				BooleanControl control = this.getMuteControl();
 				if (control != null) {
 					control.setValue(mute);
 				}
-			} catch (AudioException ex) {
 			} finally {
 				this.close();
 			}
@@ -73,7 +70,7 @@ public class AudioController implements IAudioController {
 	}
 
 	@Override
-	public boolean isMuted() {
+	public boolean isMuted() throws AudioException {
 		boolean muted = true;
 		if (this.open()) {
 			try {
@@ -81,7 +78,6 @@ public class AudioController implements IAudioController {
 				if (control != null) {
 					muted = control.getValue();
 				}
-			} catch (AudioException ex) {
 			} finally {
 				this.close();
 			}
